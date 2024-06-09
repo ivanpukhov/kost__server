@@ -1,0 +1,98 @@
+{
+  "info": {
+    "_postman_id": "your_postman_id",
+    "name": "MyApp API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Регистрация",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "register"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"user1\",\n    \"email\": \"user1@example.com\",\n    \"password\": \"password1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Вход",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"user1@example.com\",\n    \"password\": \"password1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Создать заведение",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <token>",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/establishments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "establishments"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Cafe Central\",\n    \"address\": \"123 Main St\",\n    \"phoneNumber\": \"123-456-7890\",\n    \"photo\": \"image_url\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
